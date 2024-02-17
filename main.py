@@ -55,5 +55,8 @@ async def cmd_hello(message: Message):
         f"Hello, {html.bold(html.quote(message.from_user.full_name))}",
     )
 
+@dp.message(F.text)
+async def echo_with_time(message: Message):
+
 if __name__ == "__main__":
     asyncio.run(main())
